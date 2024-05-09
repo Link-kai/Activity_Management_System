@@ -1,0 +1,3 @@
+"D:\software\CLion 2024.1\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\Activity_Management_System.dir/objects.a
+"D:\software\CLion 2024.1\bin\mingw\bin\ar.exe" qc CMakeFiles\Activity_Management_System.dir/objects.a @CMakeFiles\Activity_Management_System.dir\objects1.rsp
+"D:\software\CLion 2024.1\bin\mingw\bin\g++.exe" -g -Wl,--whole-archive CMakeFiles\Activity_Management_System.dir/objects.a -Wl,--no-whole-archive -o Activity_Management_System.exe -Wl,--out-implib,libActivity_Management_System.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Activity_Management_System.dir\linkLibs.rsp

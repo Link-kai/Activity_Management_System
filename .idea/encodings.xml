@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/src/Activity Management System.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/entity/Activity.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/entity/Activity.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/entity/Admin.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/entity/Admin.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/entity/Management.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/entity/Management.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/entity/User.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/entity/User.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/public.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/window/InitWin.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/window/InitWin.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/window/LoginWin.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/window/LoginWin.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/window/QuitWin.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/window/QuitWin.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/window/RegisterWin.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/windowTool/CButton.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/windowTool/CButton.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/windowTool/CEdit.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/windowTool/CEdit.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/windowTool/CLabel.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/windowTool/CLabel.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/windowTool/CTools.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/windowTool/CTools.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/windowTool/CtrBase.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/windowTool/CtrBase.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/尝试版管理系统1.cpp" charset="GBK" />
+  </component>
+</project>

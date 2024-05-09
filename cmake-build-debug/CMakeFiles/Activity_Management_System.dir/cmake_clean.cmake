@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "Activity_Management_System.exe"
+  "Activity_Management_System.exe.manifest"
+  "Activity_Management_System.pdb"
+  "CMakeFiles/Activity_Management_System.dir/src/Activity_Management_System.cpp.obj"
+  "CMakeFiles/Activity_Management_System.dir/src/Activity_Management_System.cpp.obj.d"
+  "CMakeFiles/Activity_Management_System.dir/src/entity/Activity.cpp.obj"
+  "CMakeFiles/Activity_Management_System.dir/src/entity/Activity.cpp.obj.d"
+  "CMakeFiles/Activity_Management_System.dir/src/entity/Management.cpp.obj"
+  "CMakeFiles/Activity_Management_System.dir/src/entity/Management.cpp.obj.d"
+  "CMakeFiles/Activity_Management_System.dir/src/entity/User.cpp.obj"
+  "CMakeFiles/Activity_Management_System.dir/src/entity/User.cpp.obj.d"
+  "CMakeFiles/Activity_Management_System.dir/src/window/HomeWin.cpp.obj"
+  "CMakeFiles/Activity_Management_System.dir/src/window/HomeWin.cpp.obj.d"
+  "CMakeFiles/Activity_Management_System.dir/src/window/InitWin.cpp.obj"
+  "CMakeFiles/Activity_Management_System.dir/src/window/InitWin.cpp.obj.d"
+  "CMakeFiles/Activity_Management_System.dir/src/window/LoginWin.cpp.obj"
+  "CMakeFiles/Activity_Management_System.dir/src/window/LoginWin.cpp.obj.d"
+  "CMakeFiles/Activity_Management_System.dir/src/window/PersonalWin.cpp.obj"
+  "CMakeFiles/Activity_Management_System.dir/src/window/PersonalWin.cpp.obj.d"
+  "CMakeFiles/Activity_Management_System.dir/src/window/QuitWin.cpp.obj"
+  "CMakeFiles/Activity_Management_System.dir/src/window/QuitWin.cpp.obj.d"
+  "CMakeFiles/Activity_Management_System.dir/src/window/RegisterWin.cpp.obj"
+  "CMakeFiles/Activity_Management_System.dir/src/window/RegisterWin.cpp.obj.d"
+  "CMakeFiles/Activity_Management_System.dir/src/windowTool/CButton.cpp.obj"
+  "CMakeFiles/Activity_Management_System.dir/src/windowTool/CButton.cpp.obj.d"
+  "CMakeFiles/Activity_Management_System.dir/src/windowTool/CEdit.cpp.obj"
+  "CMakeFiles/Activity_Management_System.dir/src/windowTool/CEdit.cpp.obj.d"
+  "CMakeFiles/Activity_Management_System.dir/src/windowTool/CLabel.cpp.obj"
+  "CMakeFiles/Activity_Management_System.dir/src/windowTool/CLabel.cpp.obj.d"
+  "CMakeFiles/Activity_Management_System.dir/src/windowTool/CMouse.cpp.obj"
+  "CMakeFiles/Activity_Management_System.dir/src/windowTool/CMouse.cpp.obj.d"
+  "CMakeFiles/Activity_Management_System.dir/src/windowTool/CTools.cpp.obj"
+  "CMakeFiles/Activity_Management_System.dir/src/windowTool/CTools.cpp.obj.d"
+  "CMakeFiles/Activity_Management_System.dir/src/windowTool/CtrBase.cpp.obj"
+  "CMakeFiles/Activity_Management_System.dir/src/windowTool/CtrBase.cpp.obj.d"
+  "libActivity_Management_System.dll.a"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/Activity_Management_System.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

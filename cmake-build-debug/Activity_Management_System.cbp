@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Activity_Management_System"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/data/C++/Activity_Management_System/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/software/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/data/C++/Activity_Management_System/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/software/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/data/C++/Activity_Management_System/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/software/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/data/C++/Activity_Management_System/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/software/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/data/C++/Activity_Management_System/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Activity_Management_System">
+				<Option output="D:/data/C++/Activity_Management_System/cmake-build-debug/Activity_Management_System.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/data/C++/Activity_Management_System/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/data/C++/Activity_Management_System/./src/serialize"/>
+					<Add directory="D:/software/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"/>
+					<Add directory="D:/software/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="D:/software/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"/>
+					<Add directory="D:/software/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="D:/software/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="D:/software/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="D:/software/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/software/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/data/C++/Activity_Management_System/cmake-build-debug/Makefile&quot;  VERBOSE=1 Activity_Management_System"/>
+					<CompileFile command="D:/software/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/data/C++/Activity_Management_System/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/software/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/data/C++/Activity_Management_System/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/software/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/data/C++/Activity_Management_System/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Activity_Management_System/fast">
+				<Option output="D:/data/C++/Activity_Management_System/cmake-build-debug/Activity_Management_System.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/data/C++/Activity_Management_System/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/data/C++/Activity_Management_System/./src/serialize"/>
+					<Add directory="D:/software/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"/>
+					<Add directory="D:/software/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="D:/software/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"/>
+					<Add directory="D:/software/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="D:/software/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="D:/software/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="D:/software/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/software/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/data/C++/Activity_Management_System/cmake-build-debug/Makefile&quot;  VERBOSE=1 Activity_Management_System/fast"/>
+					<CompileFile command="D:/software/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/data/C++/Activity_Management_System/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/software/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/data/C++/Activity_Management_System/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/software/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/data/C++/Activity_Management_System/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/data/C++/Activity_Management_System/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/software/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/data/C++/Activity_Management_System/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/software/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/data/C++/Activity_Management_System/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/software/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/data/C++/Activity_Management_System/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/software/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/data/C++/Activity_Management_System/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/data/C++/Activity_Management_System/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/software/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/data/C++/Activity_Management_System/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/software/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/data/C++/Activity_Management_System/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/software/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/data/C++/Activity_Management_System/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/software/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/data/C++/Activity_Management_System/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/Activity Management System.cpp">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/entity/Activity.cpp">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/entity/Activity.h">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/entity/Management.cpp">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/entity/Management.h">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/entity/User.cpp">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/entity/User.h">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/public.h">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/window/HomeWin.cpp">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/window/HomeWin.h">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/window/InitWin.cpp">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/window/InitWin.h">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/window/LoginWin.cpp">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/window/LoginWin.h">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/window/PersonalWin.cpp">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/window/PersonalWin.h">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/window/QuitWin.cpp">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/window/QuitWin.h">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/window/RegisterWin.cpp">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/window/RegisterWin.h">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/windowTool/CButton.cpp">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/windowTool/CButton.h">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/windowTool/CEdit.cpp">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/windowTool/CEdit.h">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/windowTool/CLabel.cpp">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/windowTool/CLabel.h">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/windowTool/CMouse.cpp">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/windowTool/CMouse.h">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/windowTool/CTools.cpp">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/windowTool/CTools.h">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/windowTool/CtrBase.cpp">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/windowTool/CtrBase.h">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

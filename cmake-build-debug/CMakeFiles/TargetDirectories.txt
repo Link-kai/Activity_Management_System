@@ -1,0 +1,3 @@
+D:/data/C++/Activity_Management_System/cmake-build-debug/CMakeFiles/Activity_Management_System.dir
+D:/data/C++/Activity_Management_System/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/data/C++/Activity_Management_System/cmake-build-debug/CMakeFiles/rebuild_cache.dir
