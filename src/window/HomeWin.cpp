@@ -51,7 +51,6 @@ void HomeWin::showWindow() {
     this->user_Button->show(4);
     this->activity_Button->show(4);
     this->exit_Button->show(4);
-    system("pause>nul");
 }
 
 void HomeWin::print(int option) {

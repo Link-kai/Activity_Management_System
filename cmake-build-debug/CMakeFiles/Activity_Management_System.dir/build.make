@@ -308,6 +308,21 @@ CMakeFiles/Activity_Management_System.dir/src/window/PersonalWin.cpp.s: cmake_fo
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Activity_Management_System.dir/src/window/PersonalWin.cpp.s"
 	"D:\software\CLion 2024.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\data\C++\Activity_Management_System\src\window\PersonalWin.cpp -o CMakeFiles\Activity_Management_System.dir\src\window\PersonalWin.cpp.s
 
+CMakeFiles/Activity_Management_System.dir/src/window/ActivityWin.cpp.obj: CMakeFiles/Activity_Management_System.dir/flags.make
+CMakeFiles/Activity_Management_System.dir/src/window/ActivityWin.cpp.obj: CMakeFiles/Activity_Management_System.dir/includes_CXX.rsp
+CMakeFiles/Activity_Management_System.dir/src/window/ActivityWin.cpp.obj: D:/data/C++/Activity_Management_System/src/window/ActivityWin.cpp
+CMakeFiles/Activity_Management_System.dir/src/window/ActivityWin.cpp.obj: CMakeFiles/Activity_Management_System.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\data\C++\Activity_Management_System\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Activity_Management_System.dir/src/window/ActivityWin.cpp.obj"
+	"D:\software\CLion 2024.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Activity_Management_System.dir/src/window/ActivityWin.cpp.obj -MF CMakeFiles\Activity_Management_System.dir\src\window\ActivityWin.cpp.obj.d -o CMakeFiles\Activity_Management_System.dir\src\window\ActivityWin.cpp.obj -c D:\data\C++\Activity_Management_System\src\window\ActivityWin.cpp
+
+CMakeFiles/Activity_Management_System.dir/src/window/ActivityWin.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Activity_Management_System.dir/src/window/ActivityWin.cpp.i"
+	"D:\software\CLion 2024.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\data\C++\Activity_Management_System\src\window\ActivityWin.cpp > CMakeFiles\Activity_Management_System.dir\src\window\ActivityWin.cpp.i
+
+CMakeFiles/Activity_Management_System.dir/src/window/ActivityWin.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Activity_Management_System.dir/src/window/ActivityWin.cpp.s"
+	"D:\software\CLion 2024.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\data\C++\Activity_Management_System\src\window\ActivityWin.cpp -o CMakeFiles\Activity_Management_System.dir\src\window\ActivityWin.cpp.s
+
 # Object files for target Activity_Management_System
 Activity_Management_System_OBJECTS = \
 "CMakeFiles/Activity_Management_System.dir/src/Activity_Management_System.cpp.obj" \
@@ -325,7 +340,8 @@ Activity_Management_System_OBJECTS = \
 "CMakeFiles/Activity_Management_System.dir/src/window/RegisterWin.cpp.obj" \
 "CMakeFiles/Activity_Management_System.dir/src/window/QuitWin.cpp.obj" \
 "CMakeFiles/Activity_Management_System.dir/src/window/HomeWin.cpp.obj" \
-"CMakeFiles/Activity_Management_System.dir/src/window/PersonalWin.cpp.obj"
+"CMakeFiles/Activity_Management_System.dir/src/window/PersonalWin.cpp.obj" \
+"CMakeFiles/Activity_Management_System.dir/src/window/ActivityWin.cpp.obj"
 
 # External object files for target Activity_Management_System
 Activity_Management_System_EXTERNAL_OBJECTS =
@@ -346,11 +362,12 @@ Activity_Management_System.exe: CMakeFiles/Activity_Management_System.dir/src/wi
 Activity_Management_System.exe: CMakeFiles/Activity_Management_System.dir/src/window/QuitWin.cpp.obj
 Activity_Management_System.exe: CMakeFiles/Activity_Management_System.dir/src/window/HomeWin.cpp.obj
 Activity_Management_System.exe: CMakeFiles/Activity_Management_System.dir/src/window/PersonalWin.cpp.obj
+Activity_Management_System.exe: CMakeFiles/Activity_Management_System.dir/src/window/ActivityWin.cpp.obj
 Activity_Management_System.exe: CMakeFiles/Activity_Management_System.dir/build.make
 Activity_Management_System.exe: CMakeFiles/Activity_Management_System.dir/linkLibs.rsp
 Activity_Management_System.exe: CMakeFiles/Activity_Management_System.dir/objects1.rsp
 Activity_Management_System.exe: CMakeFiles/Activity_Management_System.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\data\C++\Activity_Management_System\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable Activity_Management_System.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\data\C++\Activity_Management_System\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable Activity_Management_System.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Activity_Management_System.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -116,31 +116,4 @@ void LoginWin::login(bool flag) {
         }
     }
     CTools::cursorVisible(false);
-    /*
-    HANDLE hInput = GetStdHandle(STD_INPUT_HANDLE);
-    DWORD mode;
-    GetConsoleMode(hInput, &mode);
-    mode &= ~ENABLE_QUICK_EDIT_MODE;
-    mode |= ENABLE_MOUSE_INPUT;
-    SetConsoleMode(hInput, mode | ENABLE_MOUSE_INPUT);
-
-    INPUT_RECORD record;
-    DWORD n;
-    for (COORD pos = {}; ReadConsoleInput(hInput, &record, 1, &n) && n == 1;) {
-        COORD pos_new = record.Event.MouseEvent.dwMousePosition;
-        if (pos_new.X == pos.X && pos_new.Y == pos.Y)
-            continue;
-        pos = pos_new;
-        if (isInside(pos, loginWin.login_Button)) {
-            loginWin.login_Button->setHighLight();
-            if (KEY_DOWN(VK_LBUTTON)) {
-                //denglu!!!
-                cout << "µÇÂ¼³É¹¦" << endl;
-                system("pause>nul");
-                system("cls");
-            }
-        } else
-            loginWin.login_Button->setDefault();
-    }
-    */
 }

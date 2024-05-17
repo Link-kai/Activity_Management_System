@@ -500,6 +500,7 @@ CMakeFiles/Activity_Management_System.dir/src/window/PersonalWin.cpp.obj: \
  D:/data/C++/Activity_Management_System/src/window/LoginWin.h \
  D:/data/C++/Activity_Management_System/src/window/HomeWin.h \
  D:/data/C++/Activity_Management_System/src/window/PersonalWin.h \
+ D:/data/C++/Activity_Management_System/src/window/ActivityWin.h \
  D:/data/C++/Activity_Management_System/src/window/QuitWin.h \
  D:/data/C++/Activity_Management_System/src/serialize/cereal/archives/json.hpp \
  D:/data/C++/Activity_Management_System/src/serialize/cereal/details/util.hpp \

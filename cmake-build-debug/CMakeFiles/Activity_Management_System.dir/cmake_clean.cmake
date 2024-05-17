@@ -10,6 +10,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Activity_Management_System.dir/src/entity/Management.cpp.obj.d"
   "CMakeFiles/Activity_Management_System.dir/src/entity/User.cpp.obj"
   "CMakeFiles/Activity_Management_System.dir/src/entity/User.cpp.obj.d"
+  "CMakeFiles/Activity_Management_System.dir/src/window/ActivityWin.cpp.obj"
+  "CMakeFiles/Activity_Management_System.dir/src/window/ActivityWin.cpp.obj.d"
   "CMakeFiles/Activity_Management_System.dir/src/window/HomeWin.cpp.obj"
   "CMakeFiles/Activity_Management_System.dir/src/window/HomeWin.cpp.obj.d"
   "CMakeFiles/Activity_Management_System.dir/src/window/InitWin.cpp.obj"

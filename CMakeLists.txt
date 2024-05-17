@@ -37,4 +37,6 @@ add_executable(Activity_Management_System "src/Activity Management System.cpp"
         src/window/HomeWin.cpp
         src/window/PersonalWin.h
         src/window/PersonalWin.cpp
+        src/window/ActivityWin.h
+        src/window/ActivityWin.cpp
 )

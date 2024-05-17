@@ -224,6 +224,30 @@ src/entity/User.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Activity_Management_System.dir\build.make CMakeFiles/Activity_Management_System.dir/src/entity/User.cpp.s
 .PHONY : src/entity/User.cpp.s
 
+src/window/ActivityWin.obj: src/window/ActivityWin.cpp.obj
+.PHONY : src/window/ActivityWin.obj
+
+# target to build an object file
+src/window/ActivityWin.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Activity_Management_System.dir\build.make CMakeFiles/Activity_Management_System.dir/src/window/ActivityWin.cpp.obj
+.PHONY : src/window/ActivityWin.cpp.obj
+
+src/window/ActivityWin.i: src/window/ActivityWin.cpp.i
+.PHONY : src/window/ActivityWin.i
+
+# target to preprocess a source file
+src/window/ActivityWin.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Activity_Management_System.dir\build.make CMakeFiles/Activity_Management_System.dir/src/window/ActivityWin.cpp.i
+.PHONY : src/window/ActivityWin.cpp.i
+
+src/window/ActivityWin.s: src/window/ActivityWin.cpp.s
+.PHONY : src/window/ActivityWin.s
+
+# target to generate assembly for a file
+src/window/ActivityWin.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Activity_Management_System.dir\build.make CMakeFiles/Activity_Management_System.dir/src/window/ActivityWin.cpp.s
+.PHONY : src/window/ActivityWin.cpp.s
+
 src/window/HomeWin.obj: src/window/HomeWin.cpp.obj
 .PHONY : src/window/HomeWin.obj
 
@@ -533,6 +557,9 @@ help:
 	@echo ... src/entity/User.obj
 	@echo ... src/entity/User.i
 	@echo ... src/entity/User.s
+	@echo ... src/window/ActivityWin.obj
+	@echo ... src/window/ActivityWin.i
+	@echo ... src/window/ActivityWin.s
 	@echo ... src/window/HomeWin.obj
 	@echo ... src/window/HomeWin.i
 	@echo ... src/window/HomeWin.s

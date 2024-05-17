@@ -14,20 +14,9 @@ public:
     //析构函数
     ~CButton();
 
-    //文本高亮
-    void setHighLight();
-
-    //文本默认
-    void setDefault();
-
     void show(int colour = 0);
 
     WORD color;
-/*	int startX;
-	int startY;
-	int width;
-	int height;
-	char content[20]; */ //内容
 };
 
 #endif //ACTIVITY_MANAGEMENT_SYSTEM_CBUTTON_H

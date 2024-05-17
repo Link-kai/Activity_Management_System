@@ -92,8 +92,6 @@ void PersonalWin::showWindow() {
     this->inBox_Button->show(4);
     this->bro_Button->show(4);
     this->exit_Button->show(4);
-
-    system("pause>nul");
 }
 
 void PersonalWin::print(int option) {
@@ -217,12 +215,15 @@ void PersonalWin::modify() {
                 CTools::cursorVisible(true);
                 //输入新信息
                 string name = CTools::input(windowStartX + width - 10, windowStartY + 38, 20, 20, 0);
-                management.currentUser.name = name;
                 //关闭光标显示
                 CTools::cursorVisible(false);
                 //清空并更新信息
                 CTools::empty(startX + width + 3, startY + 20, 15 * 2, 3);
                 CTools::empty(windowStartX + width - 25, windowStartY + 37, 80, 6);
+                //更新信息
+                management.currentUser.name = name;
+                management.userList.find(management.currentUser.id)->second.name=name;
+                //更新面板
                 string info = "用户名：" + management.currentUser.name;
                 auto name_Button = new CButton(startX + width + 3, startY + 20, 15, 3, info, 2);
                 name_Button->show(2);
@@ -289,11 +290,13 @@ void PersonalWin::modify() {
                         break;
                     }
                 }
-                management.currentUser.passWord = pwd;
                 //关闭光标显示
                 CTools::cursorVisible(false);
                 //清空并更新信息
                 CTools::empty(windowStartX + width - 25, windowStartY + 37, 80, 6);
+                //更新信息
+                management.currentUser.passWord = pwd;
+                management.userList.find(management.currentUser.id)->second.passWord=pwd;
                 //提示更改成功
                 CLabel *tip_success_Label = new CLabel(windowStartX + width - 7, windowStartY + 38, 0, 0,
                                                        "修改 密码 成功！");
@@ -335,12 +338,15 @@ void PersonalWin::modify() {
                         break;
                     }
                 }
-                management.currentUser.gender = gender;
                 //关闭光标显示
                 CTools::cursorVisible(false);
                 //清空并更新信息
                 CTools::empty(startX + width - 30, startY + 24, 15 * 2, 3);
                 CTools::empty(windowStartX + width - 25, windowStartY + 37, 80, 6);
+                //更新信息
+                management.currentUser.gender = gender;
+                management.userList.find(management.currentUser.id)->second.gender=gender;
+                //更新面板
                 string info = "性别：" + management.currentUser.gender;
                 auto gender_Button = new CButton(startX + width - 30, startY + 24, 15, 3, info, 2);
                 gender_Button->show(2);
@@ -405,12 +411,15 @@ void PersonalWin::modify() {
                     cout << "                              ";
                     break;
                 }
-                management.currentUser.age = age;
                 //关闭光标显示
                 CTools::cursorVisible(false);
                 //清空并更新信息
                 CTools::empty(startX + width + 3, startY + 24, 15 * 2, 3);
                 CTools::empty(windowStartX + width - 25, windowStartY + 37, 80, 6);
+                //更新信息
+                management.currentUser.age = age;
+                management.userList.find(management.currentUser.id)->second.age=age;
+                //更新面板
                 string info = "年龄：" + to_string(management.currentUser.age);
                 auto age_Button = new CButton(startX + width + 3, startY + 24, 15, 3, info, 2);
                 age_Button->show(2);
@@ -500,6 +509,9 @@ void PersonalWin::modify() {
                 //清空并更新信息
                 CTools::empty(startX + width - 30, startY + 28, 15 * 2, 3);
                 CTools::empty(windowStartX + width - 31, windowStartY + 37, 80, 6);
+                //更新信息(currentUser已在switch更新)
+                management.userList.find(management.currentUser.id)->second.preference=management.currentUser.preference;
+                //更新面板
                 string info = "活动偏好：" + management.currentUser.preference;
                 auto preference_Button = new CButton(startX + width - 30, startY + 28, 15, 3, info, 2);
                 preference_Button->show(2);
@@ -727,7 +739,7 @@ void PersonalWin::inBox() {
     inBox_Button->show(3);
     inBox_Label->show(3);
     CButton *exit_Button = new CButton(startX + width - 9, startY + 40, 9, 3, "0. 返    回", 3);
-    if (management.currentUser.inBox.empty()) {
+    if (management.currentUser.inBox.empty()) {//收件箱为空
         CLabel *null_Label = new CLabel(startX + width - 9, startY + 37, 0, 0, "* 收 件 箱 为 空");
         null_Label->show(1);
         exit_Button->show(3);
@@ -738,7 +750,7 @@ void PersonalWin::inBox() {
                 break;
         }
         CTools::empty(startX + width - 30, startY + 33, 60, 10);
-    } else {
+    } else {//收到好友申请
         string name = management.currentUser.inBox;
         CLabel *tip_apply_Label = new CLabel(startX + width - 15, startY + 37, 0, 0, "收到来自          的好友申请");
         CLabel *name_Label = new CLabel(startX + width - 7 + (10 - name.length()) / 2, startY + 37, 0, 0, name);
@@ -751,9 +763,22 @@ void PersonalWin::inBox() {
         int option = 74751;
         do {
             option = choose2(1);
-            CTools::empty(startX + width - 16, startY + 37, 30, 5);
             switch (option) {
                 case 1: {
+                    bool repeat=false;//标识位，表示是否重复添加
+                    CTools::empty(startX + width - 16, startY + 37, 30, 5);
+                    for(auto user:management.currentUser.broList){
+                        if(user.name==name){
+                            CTools::empty(startX + width - 16, startY + 37, 30, 5);
+                            CLabel *tip_error_Label = new CLabel(startX + width - 16, startY + 37, 0, 0,
+                                                                 "对方已是您的好友，请勿重复添加！");
+                            tip_error_Label->show(1);
+                            repeat=true;
+                            break;
+                        }
+                    }
+                    if(repeat)
+                        break;
                     CLabel *tip_accept_Label = new CLabel(startX + width - 15, startY + 37, 0, 0,
                                                           "您已同意          的好友申请");
                     CLabel *tip_friend_Label = new CLabel(startX + width - 8, startY + 39, 0, 0, "你们已成为好友！");
@@ -763,13 +788,24 @@ void PersonalWin::inBox() {
                     //接受好友，添加进好友列表
                     for (const auto& pair : management.userList) {
                         if(name==pair.second.name){
+                            //更新信息
                             management.currentUser.broList.push_back(pair.second);
+                            management.userList.find(management.currentUser.id)->second.broList.push_back(pair.second);
+                            break;
+                        }
+                    }
+                    //同时，将自己添加进对方好友列表里
+                    for (auto& pair : management.userList) {
+                        if(name==pair.second.name){
+                            //更新信息
+                            pair.second.broList.push_back(management.currentUser);
                             break;
                         }
                     }
                     break;
                 }
                 case 2: {
+                    CTools::empty(startX + width - 16, startY + 37, 30, 5);
                     CLabel *tip_reject_Label = new CLabel(startX + width - 15, startY + 37, 0, 0,
                                                           "您已拒绝          的好友申请");
                     tip_reject_Label->show(1);
@@ -787,6 +823,9 @@ void PersonalWin::inBox() {
         }
         //消息已读，清空
         management.currentUser.inBox.clear();
+        //更新用户信息
+        management.userList.find(management.currentUser.id)->second.inBox.clear();
+        //更新面板
         CTools::empty(startX + width - 30, startY + 33, 60, 10);
     }
 }
@@ -810,9 +849,9 @@ void PersonalWin::broList() {
         bool show=true;//标识位，表示是否显示错误信息
         do {
             option = choose2(2);
-            CTools::empty(startX + width - 16, startY + 37, 30, 5);
             switch (option) {
                 case 1: {//1. 添 加
+                    CTools::empty(startX + width - 16, startY + 37, 30, 5);
                     //显示输入框、标签
                     CLabel *input_Label = new CLabel(windowStartX + width - 23, windowStartY + 37, 0, 0, "账  号");
                     CEdit *input_Edit = new CEdit(windowStartX + width - 14, startY + 37, 15, 3, "", 8, 2, 0);
@@ -822,7 +861,7 @@ void PersonalWin::broList() {
                     input_Edit->show(0);
                     tip_input_Label->show(6);
 
-                    //搜索好友用户名
+                    //搜索好友id
                     string id;
                     while (true) {
                         //输入错误时，清空内容
@@ -839,7 +878,7 @@ void PersonalWin::broList() {
                         auto it = management.userList.find(id);
                         if (it != management.userList.end()){//找到
                             if(it->second.id== management.currentUser.id){
-                                CTools::empty(windowStartX + width - 23, windowStartY + 36, 55, 5);
+                                CTools::empty(windowStartX + width - 23, windowStartY + 36, 57, 6);
                                 CLabel *tip_error_Label = new CLabel(startX + width - 8, startY + 37, 0, 0,
                                                                      "您不能添加自己！");
                                 tip_error_Label->show(1);
@@ -887,7 +926,7 @@ void PersonalWin::broList() {
                             else continue;
                         } else {//用户存在
                             //更新信息,发送好友请求
-                            bro.inBox = management.currentUser.name;
+                            management.userList.find(bro.id)->second.inBox=management.currentUser.name;
                             CTools::empty(windowStartX + width - 23, windowStartY + 36, 57, 6);
                             CLabel *tip_success_Label = new CLabel(startX + width - 8, startY + 37, 0, 0,
                                                                    "已发送好友申请！");
@@ -907,6 +946,7 @@ void PersonalWin::broList() {
                     break;
                 }
                 case 0: {//0. 返 回
+                    CTools::empty(startX + width - 16, startY + 37, 30, 5);
                     back = true;
                     break;
                 }
@@ -928,9 +968,9 @@ void PersonalWin::broList() {
             bool show=true;//标识位，表示是否显示错误信息
             do {
                 option = choose2(2);
-                CTools::empty(startX + width - 16, startY + 37, 30, 5);
                 switch (option) {
                     case 1: {//1. 添 加
+                        CTools::empty(startX + width - 16, startY + 37, 30, 5);
                         //显示输入框、标签
                         CLabel *input_Label = new CLabel(windowStartX + width - 23, windowStartY + 37, 0, 0, "账  号");
                         CEdit *input_Edit = new CEdit(windowStartX + width - 14, startY + 37, 15, 3, "", 8, 2, 0);
@@ -954,10 +994,32 @@ void PersonalWin::broList() {
                             //判断用户是否存在
                             User bro;//找到的好友
                             bool flag = false;
+                            bool repeat=false;//标识位，表示是否重复添加
                             auto it = management.userList.find(id);
                             if (it != management.userList.end()){//找到
+                                for(auto user:it->second.broList){
+                                    if(user.id==management.currentUser.id){
+                                        CTools::empty(windowStartX + width - 23, windowStartY + 36, 57, 6);
+                                        CLabel *tip_error_Label = new CLabel(startX + width - 16, startY + 37, 0, 0,
+                                                                             "对方已是您的好友，请勿重复添加！");
+                                        tip_error_Label->show(1);
+                                        CButton *exit_Button = new CButton(startX + width - 9, startY + 40, 9, 3, "0. 返    回", 3);
+                                        exit_Button->show(3);
+                                        char key;
+                                        while (true) {//选择功能号 0 返回
+                                            key = getch();
+                                            if (key == '0')
+                                                break;
+                                        }
+                                        CTools::empty(startX + width - 9, startY + 40, 18, 2);
+                                        flag = false;
+                                        back=true;
+                                        repeat=true;
+                                        break;
+                                    }
+                                }
                                 if(it->second.id== management.currentUser.id){
-                                    CTools::empty(windowStartX + width - 23, windowStartY + 36, 55, 5);
+                                    CTools::empty(windowStartX + width - 23, windowStartY + 36, 57, 6);
                                     CLabel *tip_error_Label = new CLabel(startX + width - 8, startY + 37, 0, 0,
                                                                          "您不能添加自己！");
                                     tip_error_Label->show(1);
@@ -973,8 +1035,10 @@ void PersonalWin::broList() {
                                     flag = false;
                                     back=true;
                                 }else if(it->first == id){
-                                    bro = it->second;
-                                    flag = true;
+                                    if(!repeat){//不重复才运行
+                                        bro = it->second;
+                                        flag = true;
+                                    }
                                 }
                             }
                             if (flag == false) {
@@ -1005,7 +1069,7 @@ void PersonalWin::broList() {
                                 else continue;
                             } else {//用户存在
                                 //更新信息,发送好友请求
-                                bro.inBox = management.currentUser.name;
+                                management.userList.find(bro.id)->second.inBox=management.currentUser.name;
                                 CTools::empty(windowStartX + width - 23, windowStartY + 36, 57, 6);
                                 CLabel *tip_success_Label = new CLabel(startX + width - 8, startY + 37, 0, 0,
                                                                        "已发送好友申请！");
@@ -1025,6 +1089,7 @@ void PersonalWin::broList() {
                         break;
                     }
                     case 0: {//0. 返 回
+                        CTools::empty(startX + width - 16, startY + 37, 30, 5);
                         back = true;
                         break;
                     }
@@ -1048,9 +1113,9 @@ void PersonalWin::broList() {
             bool show=true;//标识位，表示是否显示错误信息
             do {
                 option = choose2(2);
-                CTools::empty(startX + width - 18, startY + 36, 40, 6);
                 switch (option) {
                     case 1: {//1. 添 加
+                        CTools::empty(startX + width - 18, startY + 36, 40, 6);
                         //显示输入框、标签
                         CLabel *input_Label = new CLabel(windowStartX + width - 23, windowStartY + 37, 0, 0, "账  号");
                         CEdit *input_Edit = new CEdit(windowStartX + width - 14, startY + 37, 15, 3, "", 8, 2, 0);
@@ -1074,10 +1139,32 @@ void PersonalWin::broList() {
                             //判断用户是否存在
                             User bro;//找到的好友
                             bool flag = false;
+                            bool repeat=false;//标识位，表示是否重复添加
                             auto it = management.userList.find(id);
                             if (it != management.userList.end()){//找到
+                                for(auto user:it->second.broList){
+                                    if(user.id==management.currentUser.id){
+                                        CTools::empty(windowStartX + width - 23, windowStartY + 36, 57, 6);
+                                        CLabel *tip_error_Label = new CLabel(startX + width - 16, startY + 37, 0, 0,
+                                                                             "对方已是您的好友，请勿重复添加！");
+                                        tip_error_Label->show(1);
+                                        CButton *exit_Button = new CButton(startX + width - 9, startY + 40, 9, 3, "0. 返    回", 3);
+                                        exit_Button->show(3);
+                                        char key;
+                                        while (true) {//选择功能号 0 返回
+                                            key = getch();
+                                            if (key == '0')
+                                                break;
+                                        }
+                                        CTools::empty(startX + width - 9, startY + 40, 18, 2);
+                                        flag = false;
+                                        back=true;
+                                        repeat=true;
+                                        break;
+                                    }
+                                }
                                 if(it->second.id== management.currentUser.id){
-                                    CTools::empty(windowStartX + width - 23, windowStartY + 36, 55, 5);
+                                    CTools::empty(windowStartX + width - 23, windowStartY + 36, 57, 6);
                                     CLabel *tip_error_Label = new CLabel(startX + width - 8, startY + 37, 0, 0,
                                                                          "您不能添加自己！");
                                     tip_error_Label->show(1);
@@ -1093,8 +1180,10 @@ void PersonalWin::broList() {
                                     flag = false;
                                     back=true;
                                 }else if(it->first == id){
-                                    bro = it->second;
-                                    flag = true;
+                                    if(!repeat){//不重复才运行
+                                        bro = it->second;
+                                        flag = true;
+                                    }
                                 }
                             }
                             if (flag == false) {
@@ -1125,7 +1214,7 @@ void PersonalWin::broList() {
                                 else continue;
                             } else {//用户存在
                                 //更新信息,发送好友请求
-                                bro.inBox = management.currentUser.name;
+                                management.userList.find(bro.id)->second.inBox=management.currentUser.name;
                                 CTools::empty(windowStartX + width - 23, windowStartY + 36, 57, 6);
                                 CLabel *tip_success_Label = new CLabel(startX + width - 8, startY + 37, 0, 0,
                                                                        "已发送好友申请！");
@@ -1145,6 +1234,7 @@ void PersonalWin::broList() {
                         break;
                     }
                     case 0: {//0. 返 回
+                        CTools::empty(startX + width - 18, startY + 36, 40, 6);
                         back = true;
                         break;
                     }

@@ -23,10 +23,14 @@ public:
     void home();
     //个人主页
     void personalPage();
+    //活动面板
+    void activityPage();
     //退出面板
     void quit();
-
+    //保存数据
     void loadData();
+    //读取数据
+    void saveData(Management management);
 
     //菜单面板
     //加载用户

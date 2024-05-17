@@ -9,18 +9,6 @@ void CTools::goto_xy(int x, int y) {
     SetConsoleCursorPosition(hOut, pos);
 }
 
-void get_xy(int &x, int &y) {
-    //获取句柄
-    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-    //控制台屏幕缓冲区结构体
-    CONSOLE_SCREEN_BUFFER_INFO csbi;
-    //获取控制台屏幕缓冲区的信息
-    GetConsoleScreenBufferInfo(hConsole, &csbi);
-    x = csbi.dwCursorPosition.X;
-    y = csbi.dwCursorPosition.Y;
-}
-
-
 void CTools::drawWindow(int startX, int startY, int width, int height, int colour) {
     //设置颜色
     HANDLE hOutput = GetStdHandle(STD_OUTPUT_HANDLE); //获取标准输出句柄
@@ -32,12 +20,11 @@ void CTools::drawWindow(int startX, int startY, int width, int height, int colou
     printf("╭");
     for (i = 0; i < width - 2; i++)  //控制循环次数width-2次
     {
-        Sleep(1);
+        //Sleep(1);
         printf("━ ");
     }
     printf("╮");
-
-    if(startX==windowStartX&&startY==windowStartY){
+    if(startX==windowStartX&&startY==windowStartY||startX==windowStartX+windowWidth-60&&startY==windowStartY+15||startX==windowStartX+windowWidth-60&&startY==windowStartY+15){
         //打印表头线
         goto_xy(startX, startY + 2);
         for (i = 0; i < width - 1; i++)  //控制循环次数width-2次
@@ -46,7 +33,7 @@ void CTools::drawWindow(int startX, int startY, int width, int height, int colou
 
     //左边 x不变 y在变 (y到y+height)
     for (i = 1; i <= height - 1; i++) {
-        Sleep(1);
+        //Sleep(1);
         goto_xy(startX, startY + i);
         printf("┃");
         goto_xy(startX + width * 2 - 3, startY + i);
@@ -76,6 +63,8 @@ void CTools::empty(int startX, int startY, int width, int height){
 string CTools::input(int x, int y, int maxLen, int maxLine, int ips) {
     HANDLE hOutput = GetStdHandle(STD_OUTPUT_HANDLE); //获取标准输出句柄
     SetConsoleTextAttribute(hOutput, CtrBase::selectColour(4));
+    if(x==windowStartX + windowWidth - 22 + 10 + 1)
+        SetConsoleTextAttribute(hOutput, CtrBase::selectColour(10));
     CTools::goto_xy(x, y);
     string text;
     char key;

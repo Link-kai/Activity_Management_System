@@ -29,6 +29,7 @@ WORD CtrBase::selectColour(int colour) {
     //7：灰
     //8：按钮选中红
     //9：清屏默认色
+    //10：白色
     switch (colour) {
         case 1:
             return FOREGROUND_INTENSITY | FOREGROUND_RED;
@@ -50,6 +51,8 @@ WORD CtrBase::selectColour(int colour) {
             return BACKGROUND_RED | BACKGROUND_INTENSITY | FOREGROUND_INTENSITY | FOREGROUND_GREEN | FOREGROUND_BLUE;
         case 9:
             return FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE;
+        case 10:
+            return FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE;
         default:
             return 7;
     }

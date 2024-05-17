@@ -29,6 +29,7 @@ using namespace std;
 #include "window/LoginWin.h"
 #include "window/HomeWin.h"
 #include "window/PersonalWin.h"
+#include "window/ActivityWin.h"
 #include "window/QuitWin.h"
 
 #include "serialize/cereal/archives/json.hpp"
@@ -38,6 +39,7 @@ using namespace std;
 
 
 #define DATA_FILE "../src/dataFile/data.json"
+#define PARTICIPANT_FILE "../src/dataFile/participant.json"
 
 
 #define windowStartX 10

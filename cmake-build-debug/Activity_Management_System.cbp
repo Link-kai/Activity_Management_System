@@ -108,6 +108,12 @@
 		<Unit filename="D:/data/C++/Activity_Management_System/src/public.h">
 			<Option target="Activity_Management_System"/>
 		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/window/ActivityWin.cpp">
+			<Option target="Activity_Management_System"/>
+		</Unit>
+		<Unit filename="D:/data/C++/Activity_Management_System/src/window/ActivityWin.h">
+			<Option target="Activity_Management_System"/>
+		</Unit>
 		<Unit filename="D:/data/C++/Activity_Management_System/src/window/HomeWin.cpp">
 			<Option target="Activity_Management_System"/>
 		</Unit>
